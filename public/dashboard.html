@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster Pro - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://via.placeholder.com/40x40/6366f1/FFFFFF?text=TM" alt="TaskMaster Pro Logo" class="logo-img">
+                    TaskMaster Pro
+                </a>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="dashboard.html" class="nav-link nav-active">Dashboard</a></li>
+                    <li class="nav-item"><a href="#" id="logoutBtnNav" class="nav-link nav-button primary">Logout</a></li>
+                </ul>
+                <button class="hamburger" aria-label="Toggle navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="dashboard-wrapper">
+        <aside class="sidebar">
+            <div class="sidebar-user">
+                <img src="https://via.placeholder.com/80x80/6366f1/FFFFFF?text=JD" alt="User Avatar" class="user-avatar">
+                <h3 id="userName">Hello, User!</h3>
+                <p class="user-email" id="userEmail"></p>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#" class="sidebar-link sidebar-active"><i class="fas fa-home"></i> Overview</a></li>
+                    <li><a href="#"><i class="fas fa-list-check"></i> My Tasks</a></li>
+                    <li><a href="#"><i class="fas fa-calendar-alt"></i> Calendar</a></li>
+                    <li><a href="#"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                    <li><a href="#"><i class="fas fa-chart-line"></i> Reports</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" class="sidebar-link" id="profileLink"><i class="fas fa-user-circle"></i> Profile</a>
+                <button class="btn btn-secondary btn-full logout-sidebar-btn" id="logoutBtnSidebar">Logout</button>
+            </div>
+        </aside>
+
+        <main class="dashboard-main">
+            <div class="dashboard-header">
+                <h2>Dashboard Overview</h2>
+                <div class="quick-actions">
+                    <button class="btn btn-primary"><i class="fas fa-plus"></i> New Task</button>
+                    <button class="btn btn-secondary"><i class="fas fa-filter"></i> Filter</button>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="card stat-card">
+                    <div class="card-icon"><i class="fas fa-tasks"></i></div>
+                    <div class="card-content">
+                        <h4>Total Tasks</h4>
+                        <p id="totalTasks">25</p>
+                    </div>
+                </div>
+                <div class="card stat-card">
+                    <div class="card-icon"><i class="fas fa-check-circle"></i></div>
+                    <div class="card-content">
+                        <h4>Completed</h4>
+                        <p id="completedTasks">18</p>
+                    </div>
+                </div>
+                <div class="card stat-card">
+                    <div class="card-icon"><i class="fas fa-hourglass-half"></i></div>
+                    <div class="card-content">
+                        <h4>Pending</h4>
+                        <p id="pendingTasks">7</p>
+                    </div>
+                </div>
+                <div class="card stat-card">
+                    <div class="card-icon"><i class="fas fa-calendar-day"></i></div>
+                    <div class="card-content">
+                        <h4>Due Today</h4>
+                        <p id="dueTodayTasks">3</p>
+                    </div>
+                </div>
+
+                <div class="card large-card recent-tasks">
+                    <h3>Recent Tasks</h3>
+                    <ul>
+                        <li><i class="fas fa-circle-notch status-pending"></i> Prepare Q4 Report <span class="task-date">Due: Nov 15</span></li>
+                        <li><i class="fas fa-check-circle status-completed"></i> Update Website Content <span class="task-date">Completed: Nov 10</span></li>
+                        <li><i class="fas fa-circle-notch status-pending"></i> Team Meeting Agenda <span class="task-date">Due: Nov 12</span></li>
+                        <li><i class="fas fa-check-circle status-completed"></i> Review Marketing Strategy <span class="task-date">Completed: Nov 8</span></li>
+                    </ul>
+                </div>
+
+                <div class="card large-card upcoming-deadlines">
+                    <h3>Upcoming Deadlines</h3>
+                    <ul>
+                        <li><i class="fas fa-calendar-times deadline-icon"></i> Project X Final Review <span class="deadline-date">Nov 20</span></li>
+                        <li><i class="fas fa-calendar-times deadline-icon"></i> Client Proposal Submission <span class="deadline-date">Nov 25</span></li>
+                        <li><i class="fas fa-calendar-times deadline-icon"></i> Budget Allocation Meeting <span class="deadline-date">Nov 30</span></li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>TaskMaster Pro</h3>
+                    <p class="tagline">Master Your Day, Every Day.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 TaskMaster Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
